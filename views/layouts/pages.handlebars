@@ -1,53 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Pages Tool</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/css/blog-home.css" rel="stylesheet">
-
-    <link href="/css/blog-post.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <!-- Navigation -->
-
-    <!-- Page Content -->
-    <div class="container">
-
-      {{#if errors}}
-
-        {{#each errors}}
-          <div class="alert alert-danger">
-            {{message}}
-          </div>
-        {{/each}}
-
-      {{/if}}
-
+   <head>
+      <title>MOTS Pages Guide</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/pages/styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <style>
+      	.mainBody{
+				background-color: white;
+				height: 650px;
+			}
+      </style>
+   </head>
+   <body>
       {{{body}}}
-
-    </div>
-    <!-- /.container -->
-
-    <!-- Footer -->
-    
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  </body>
-
+   </body>
 </html>

@@ -10,7 +10,6 @@ const LocalStrategy = require('passport-local').Strategy;
 router.all('/*', (req, res, next)=>{
 
     req.app.locals.layout = 'home';
-    console.log("test route home")
     next();
 
 });

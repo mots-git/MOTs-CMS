@@ -1,0 +1,235 @@
+body{
+	background-color: rgb(0, 99, 158)!important;
+}
+.mainBody{
+	background-color: white;
+	height: 600px;
+}
+.container{
+	width:100%;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.col-md-3{
+	margin-top: 10px;
+}
+.titleBox{
+	color: #fff!important;
+    height: 50px;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 33px!important;
+    padding: 0px;
+    padding-bottom: 50px;
+    font-size: 20px;
+	float: left;
+    background-color: rgb(0, 99, 158)!important;
+}
+.well, .well-openMotsCase{
+	border-radius: 35%!important;
+	color: #fff!important;
+	height: 140px;
+	width: 155px;
+	font-weight: bold;
+	text-align: center;
+	background-color: rgb(176, 64, 38)!important;
+	padding-top: 55px!important;
+	font-size: 20px;
+	cursor: pointer;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 58%);
+}
+/* tooltip*/
+.tooltip {
+  position: relative;
+  display: contents;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* tooltip*/
+
+.arrowImage{
+	cursor: pointer;
+}
+.well-openMotsCase{
+	border-radius: 15%!important;
+	height: 70px;
+	width: 200px;
+	margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+	padding-top: 20px!important;
+}
+#assets-copy-image-yes, #assets-copy-image-no{
+	width: 35px;
+    margin-top: 78px;
+    float: left;
+    margin-left: 20px;
+}
+#pageText{
+	float:left; 
+	margin-left: 0px;
+}
+.headerImage{
+	height: 100px;
+    margin-left: -15px;
+    float: right;
+	padding-top: 10px;
+}
+.headerText{
+	float:left;
+	color:white;
+	font-size: 60px;
+}
+.textBody, #lvl_1, #lvl_2, #lvl_3, #lvl_4{
+	width: 90%;
+    padding-left: 23%;
+    text-align: left;
+}
+.titleTextBody{
+    text-align: left;
+	margin-top: 5%;
+}
+#textResultsDisplay{
+border: 1px black solid;
+    width: 30%;
+	left: 35%;
+    margin: auto;
+	
+}
+#displayText{
+	width: 30%;
+}
+#resultsImage{
+	
+}
+#q1, #q2, #q3, #q4, #resultText{
+	text-align: center;
+	margin-top: 30px;
+    margin-bottom: 30px;
+	/*margin-right: 16%;*/
+}
+#level1, #level2, #level3, #level4{
+	margin-left: 50px;
+}
+#twoblocks{
+	padding-left: 72px;
+}
+.active, .collapsible:hover {
+	background-color: #555;
+}
+.accordion_container {
+    width: 250%;
+    margin-left: 22%;
+}
+.accordion_head {
+    background-color: #ffffff;
+    color: black;
+    cursor: pointer;
+    font-family: arial;
+    border: 2px solid #eaebed;
+    font-size: 14px;
+    margin: 0 0 1px 0;
+    padding: 7px 11px;
+	font-weight: bold;
+}
+.accordion_body {
+    background: #dbe3ed;
+}
+.accordion_body p {
+    padding: 18px 5px;
+    margin: 0px;
+}
+.plusminus {
+	float: right;
+}
+.float-container {
+			border: 3px solid #fff;
+			padding: 20px;
+			margin-left: 11%;
+		}
+
+		.float-child-left {
+			width: 20%;
+			float: left;
+			padding: 20px;
+		} 
+		.float-child-right {
+			width: 50%;
+			float: left;
+			margin-left: 1%;
+		} 	
+		.bullet-info{
+			text-align: left;
+			font-size: 15px;
+		}
+		.tick-image {
+		  list-style-image: url(assets/Tick_Icon_List.png);
+		}
+		.float-container-buttons {
+			border: 3px solid #fff;
+			padding: 20px;
+			margin-left: 30%;
+		}
+		.float-child-left-buttons {
+			width: 20%;
+			float: left;
+		} 
+		.float-child-right-buttons {
+			width: 50%;
+			float: left;
+			margin-left: 1%;
+		} 
+@media (min-width: 992px){
+	.col-md-3 {
+		width: 20%;
+	}
+}
+@media (max-width: 1000px) {
+	.well{
+		float: none;
+		margin: 0 auto;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	.headerImage{
+		float:left;
+		padding-left: 25%;
+	}
+	.headerText{
+		float:right;
+		padding-right: 5%;
+	}
+	#twoblocks{
+		padding-left: 15px;
+	}
+}
+@media (max-width: 700px) {
+	.headerImage{
+		float: none;
+		margin: 0 auto;
+		padding-left: 0%;
+	}
+	.headerText{
+		float: none;
+		margin: 0 auto;
+		padding-right: 0%
+	}
+}

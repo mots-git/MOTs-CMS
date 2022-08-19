@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>MOTS Pages Guide</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/pages/styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="/js/pages/acquisition.js"></script>
+	  <style>
+		#assets-copy-image-yes, #assets-copy-image-no {
+			margin-top: 49px;
+		}
+		.titleBox{
+         width: 150px;
+         padding-bottom: 50px;
+      }
+      .mainBody {
+          height: 690px;
+      }
+	  </style>
+   </head>
+   <body>
+      <div class="container text-center">
+      <div class="row">
+         <div class="col-md-4">
+            <img class="headerImage" src="/assets/Owl_Avatar.png" />
+         </div>
+         <div class="col-md-6">
+            <h2 class="headerText">
+               MOTS Pages Guide
+            </h2>
+         </div>
+      </div>
+      <div class = "mainBody">
+         <br>
+         <div class="row">
+            <div class="col-md-3 col-md-offset-2">
+               <div class="titleBox" style="padding-top: 20px!important">Acquisition</div>
+            </div>
+         </div>
+         <div id="lvl_results_yes">
+            <div class="row">
+               <div class="col-md-3 col-md-offset-2">
+                  <img src="/assets/Tick_Icon.png" id="resultsImage" />
+               </div>
+               <div class="col-md-3" id="displayText" style="width:40%">
+                  <h4>For acquired pages we can offer an Affiliation, this will link the acquired page(s) as children to the current Pages.(parent) With this the client has the option to roll up jobs/employees and add an acquired banner on the page that redirects to the parent page.
+                  We require this <a href="https://docs.google.com/document/d/1uRmGMTwjcQJUtvBrUg6jAo2MUDcJGXeXPM5wKaKUjM4/edit" style="text-decoration: underline;" target="_blank">form</a> to be completed</h4>
+                  <h4>We also require proof of the relationship between these pages via documentation or webpage stating their relationship/acquisition</h4>
+               </div>
+            </div>
+            <div class="row">
+               <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4" style="left:40%;">
+                  <p>Request Type: Acquisition / Affiliation</p>
+                  <p id="level1-results-yes">Expected Parent page URL:</p>
+                  <p id="level2-results-yes">Expected Child page(s) URL:</p>
+                  <p id="level3-results-yes">Would the client like a banner added to the child page(s):</p>
+               </div>
+               <div class="col-md-3 col-md-offset-4">
+                  <div class = "arrowImage" onclick="saveFile()"><img src="/assets/copy_paste.png" id="assets-copy-image-yes" style="margin-top: 99px;margin-left: 80px;"/></div>
+               </div>
+            </div>
+            <div class="row">
+
+               <div class="float-container-buttons" style="margin-left: 36%;padding-top: 0px;">
+
+              <div class="float-child-left-buttons">
+                  <div class="well-openMotsCase" target="_blank"  onclick="window.open('https://lnkd.in/gb679H8F')">Open a MOTs Case</div>
+               </div>
+              
+              <div class="float-child-right-buttons">
+                  <div class="well-openMotsCase" target="_blank" onclick="window.open('https://www.linkedin.com/help/linkedin/ask/LM-IR')" style="padding-top: 10px!important;">Open LMS Support Case</div>
+                  <p style="margin-left: -20%; width: 80%;">Don't know where to open a case? See <a target="_blank" href="https://microsoft.sharepoint.com/teams/MOTSSales/SitePages/How-to-Reach-Us.aspx">here</a></p>
+              </div>
+
+           
+               </div>
+
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-9">
+               <div onclick="location.href='/pagesTool';"><img class="arrowImage" src="/assets/Return_Icon.png" style="float:right"/></div>
+            </div>
+         </div>
+         <br>
+      </div>
+   </body>
+</html>

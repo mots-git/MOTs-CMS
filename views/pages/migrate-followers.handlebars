@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>MOTS Pages Guide</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/pages/styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="/js/pages/migrate-followers.js"></script>
+   </head>
+   <body>
+      <div class="container text-center">
+      <div class="row">
+         <div class="col-md-4">
+            <img class="headerImage" src="/assets/Owl_Avatar.png" />
+         </div>
+         <div class="col-md-6">
+            <h2 class="headerText">
+               MOTS Pages Guide
+            </h2>
+         </div>
+      </div>
+      <div class = "mainBody">
+         <br>
+         <div class="row">
+            <div class="col-md-3 col-md-offset-2">
+               <div class="titleBox" style="padding-top: 20px!important">Migrate Followers</div>
+            </div>
+         </div>
+         <div id="lvl_1">
+            <h4 id="q1">Are any of the pages in question a subsidiary of the other or the result of an acquisition?</h4>
+            <div id="back" class="col-md-3">
+               <div onclick="location.href='/pagesTool';"><img class="arrowImage" src="/assets/BackButton.png" style="margin-top: 30px;"/></div>
+            </div>
+            <div id="options">
+               <button class="well" id="level1" onclick="add_results_Level1(this)" style="padding-top: 15px!important;">Yes</button>
+               <button class="well" id="level2" onclick="add_results_Level1(this)" style="padding-top: 15px!important;">No</button>
+            </div>
+         </div>
+         <div id="lvl_results_yes">
+            <div class="row">
+               <div class="col-md-3 col-md-offset-2">
+                  <img src="/assets/Tick_Icon.png" id="resultsImage" />
+               </div>
+               <div class="col-md-3" id="displayText">
+                  <h4>Based on your inputs we should be able to migrate the followers of this page provided the client can prove the relationship of these pages with some documentation or webpage stating their relationship</h4>
+                  <h4 id = "resultReason-yes">Please copy the below and add it to the case that you open</h4>
+               </div>
+            </div>
+            <div class="row">
+               <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
+                  <p>Request Type: Migrate Followers</p>
+                  <p id="level1-results-yes">level 1</p>
+                  <p id="level2-results-yes">level 2</p>
+               </div>
+               <div class="col-md-3 col-md-offset-4">
+                  <div class = "arrowImage" onclick="saveFile()"><img src="/assets/copy_paste.png" id="assets-copy-image-yes"/></div>
+               </div>
+            </div>
+            <div class="row">
+
+               <div class="float-container-buttons" style="padding-top: 0px;">
+
+              <div class="float-child-left-buttons">
+                  <div class="well-openMotsCase" target="_blank"  onclick="window.open('https://lnkd.in/gb679H8F')">Open a MOTs Case</div>
+               </div>
+              
+              <div class="float-child-right-buttons">
+                  <div class="well-openMotsCase" target="_blank" onclick="window.open('https://www.linkedin.com/help/linkedin/ask/LM-IR')" style="padding-top: 10px!important;">Open LMS Support Case</div>
+                  <p style="margin-left: -20%; width: 80%;">Don't know where to open a case? See <a target="_blank" href="https://microsoft.sharepoint.com/teams/MOTSSales/SitePages/How-to-Reach-Us.aspx">here</a></p>
+              </div>
+           
+               </div>
+            </div>
+         </div>
+         <div id="lvl_results_no">
+            <div class="row">
+               <div class="col-md-3 col-md-offset-2">
+                  <img src="/assets/Line_Icon.png" id="resultsImage" />
+               </div>
+               <div class="col-md-3" id="displayText">
+                  <h4>Based on your inputs it is <b>unlikely</b> that we can process a follower migration request as one of the pages is acquired</h4>
+                  <h4 id = "resultReason-no">However please continue to open a case and copy the following into it</h4>				  
+               </div>
+            </div>
+            <div class="row">
+               <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
+                  <p>Request Type: Migrate Followers</p>
+                  <p id="level1-results-no">level 1</p>
+                  <p id="level2-results-no">level 2</p>
+               </div>
+               <div class="col-md-3 col-md-offset-4">
+                  <div class = "arrowImage" onclick="saveFile()"><img src="/assets/copy_paste.png" id="assets-copy-image-no"/></div>
+               </div>
+            </div>
+            <div class="row">
+
+               <div class="float-container-buttons">
+
+              <div class="float-child-left-buttons">
+                  <div class="well-openMotsCase" target="_blank"  onclick="window.open('https://lnkd.in/gb679H8F')">Open a MOTs Case</div>
+               </div>
+              
+              <div class="float-child-right-buttons">
+                  <div class="well-openMotsCase" target="_blank" onclick="window.open('https://www.linkedin.com/help/linkedin/ask/LM-IR')" style="padding-top: 10px!important;">Open LMS Support Case</div>
+                  <p style="margin-left: -20%; width: 80%;">Don't know where to open a case? See <a target="_blank" href="https://microsoft.sharepoint.com/teams/MOTSSales/SitePages/How-to-Reach-Us.aspx">here</a></p>
+              </div>
+           
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-9">
+               <div onclick="location.href='/pagesTool';"><img class="arrowImage" src="/assets/Return_Icon.png" style="float:right"/></div>
+            </div>
+         </div>
+         <br>
+      </div>
+      <script type="text/javascript">
+         $(document).ready(function() {          
+			 document.getElementById("lvl_1").style.display="block";
+			 document.getElementById("lvl_results_yes").style.display="none";
+			 document.getElementById("lvl_results_no").style.display="none";         
+         });
+      </script>
+   </body>
+</html>

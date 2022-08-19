@@ -7,7 +7,6 @@ const {userAuthenticated} = require('../../helpers/authentication');
 router.all('/*', userAuthenticated, (req, res, next)=>{
 
     req.app.locals.layout = 'admin';
-    console.log("test route admin")
     next();
 
 });

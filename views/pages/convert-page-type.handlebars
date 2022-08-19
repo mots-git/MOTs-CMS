@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>MOTS Pages Guide</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/pages/styles.css">	  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="/js/pages/convert-page-type.js"></script>
+	  <style>
+	  	.mainBody {
+		    height: 670px;
+		}
+	  </style>
+   </head>
+   <body>
+      <div class="container text-center">
+         <div class="row">
+            <div class="col-md-4">
+               <img class="headerImage" src="/assets/Owl_Avatar.png" />
+            </div>
+            <div class="col-md-6">
+               <h2 class="headerText">
+               MOTS Pages Guide
+               </h2>
+            </div>
+         </div>
+         <div class = "mainBody">
+			 <br>
+			 <div class="row">
+				<div class="col-md-3 col-md-offset-2">
+					<div class="titleBox" style="padding-top: 20px!important">Convert Page Type</div>
+				</div>
+			 </div>
+			 <div class="row">
+				 <div class="col-md-6 col-md-offset-3">
+					 <div class="textBody" id="descriptionText">
+						<h4 id="headerTitle">Which scenario best describes your conversion type</h4>
+					 </div> 
+				 </div>
+			 </div>
+			<div id="page1">
+				
+				<div class="row">
+				   <div class="col-md-3 col-md-offset-3">
+					  <div class="well" onclick="CompanyToShowcase()" style="padding: 0 !important; padding-top: 45px!important;">Company to Showcase</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="CompanyToUniversity()" style="padding-top: 30px!important;">Company to University</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="ShowcaseToCompany()" style="padding-top: 30px!important;">Showcase to Company</div>
+				   </div>
+				</div>
+				<div class="row">
+				   <div class="col-md-3 col-md-offset-3">
+					  <div class="well" onclick="ShowcaseToUniversity()" style="padding-top: 30px!important;">Showcase to University</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="UniversityToCompany()" style="padding-top: 30px!important;">University to Company</div>
+				   </div>
+				   <div class="col-md-3">
+					  <div class="well" onclick="UniversityToShowcase()" style="padding-top: 30px!important;">University to Showcase</div>
+				   </div>
+				</div>
+			</div>
+			<div id="lvl_1" style="display: none;">
+            <h4 id="q1">Is this change due to an acquisition or a subsidiary?</h4>
+            <div id="back" class="col-md-3">
+               <div onclick="location.href='/pagesTool';"><img class="arrowImage" src="/assets/BackButton.png" style="margin-top: 30px;"/></div>
+            </div>
+            <div id="options">
+               <button class="well" id="level1" onclick="AquisitionYes()" style="padding-top: 25px!important;"> Yes </button>
+               <button class="well" id="level1" onclick="AquisitionNo()" style="padding-top: 25px!important;"> No </button>
+            </div>
+         </div>
+			<div id="lvl_results_yes">
+				<div class="row">
+				   <div class="col-md-3 col-md-offset-2">
+					  <img src="/assets/Tick_Icon.png" id="resultsImage" />
+				   </div>
+				   <div class="col-md-3" id="displayText">
+					  <h4>We will review this change.</h4>
+					  <h4 id = "resultReason-yes">Please provide the following when opening a ticket</h4>
+					  <ul>
+					  		<li id="bullet1" style="text-align: left;font-size: 18px;"></li>
+					  		<li id="bullet1-company-showcase" style="text-align: left;font-size: 18px; display: none;">A completed copy of this <a href="https://drive.google.com/file/d/1NuBNFTFo2EAmjHkzOZ8gwNJaC4Rrrayr/view" style="text-decoration: underline;">form</a></li>
+					  		<li id="bullet2" style="text-align: left;font-size: 18px;"></li>
+					  </ul>
+				   </div>
+				</div>
+				<div class="row">
+				   <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
+					  <p>Request Type: Convert Page Type</p>
+					  <p id="level1-results-yes"></p>
+					  <p id="level2-results-yes"></p>
+					  <p id="level3-results-yes"></p>
+				   </div>
+				   <div class="col-md-3 col-md-offset-4">
+					  <div class = "arrowImage" onclick="saveFile()"><img src="/assets/copy_paste.png" id="assets-copy-image-yes"/></div>
+				   </div>
+				</div>
+				<div class="row">
+
+               <div class="float-container-buttons">
+
+              <div class="float-child-left-buttons">
+                  <div class="well-openMotsCase" target="_blank"  onclick="window.open('https://lnkd.in/gb679H8F')">Open a MOTs Case</div>
+               </div>
+              
+              <div class="float-child-right-buttons">
+                  <div class="well-openMotsCase" target="_blank" onclick="window.open('https://www.linkedin.com/help/linkedin/ask/LM-IR')" style="padding-top: 10px!important;">Open LMS Support Case</div>
+                  <p style="margin-left: -20%; width: 80%;">Don't know where to open a case? See <a target="_blank" href="https://microsoft.sharepoint.com/teams/MOTSSales/SitePages/How-to-Reach-Us.aspx">here</a></p>
+              </div>
+           
+               </div>
+            </div>
+			 </div>
+			 <div id="lvl_results_no">
+            <div class="row">
+				   <div class="col-md-3 col-md-offset-2">
+					  <img src="/assets/Line_Icon.png" id="resultsImage" />
+				   </div>
+				   <div class="col-md-3" id="displayText">
+					  <h4>It is unlinkely that we will be able to process this change.</h4>
+					  <h4 id = "resultReason-no">Please provide the following when opening a ticket</h4>
+					  <ul>
+					  		<li id="bullet1-no" style="text-align: left;font-size: 18px;"></li>
+					  		<li id="bullet1-company-showcase-no" style="text-align: left;font-size: 18px; display: none;">A completed copy of this <a href="https://drive.google.com/file/d/1NuBNFTFo2EAmjHkzOZ8gwNJaC4Rrrayr/view" style="text-decoration: underline;">form</a></li>
+					  		<li id="bullet2-no" style="text-align: left;font-size: 18px;"></li>
+					  </ul>
+				   </div>
+				</div>
+				<div class="row">
+				   <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
+					  <p>Request Type: Convert Page Type</p>
+					  <p id="level1-results-no"></p>
+					  <p id="level2-results-no"></p>
+					  <p id="level3-results-no"></p>
+				   </div>
+				   <div class="col-md-3 col-md-offset-4">
+					  <div class = "arrowImage" onclick="saveFile()"><img src="/assets/copy_paste.png" id="assets-copy-image-no"/></div>
+				   </div>
+				</div>
+				<div class="row">
+              <div class="float-container-buttons">
+              <div class="float-child-left-buttons">
+                  <div class="well-openMotsCase" target="_blank"  onclick="window.open('https://lnkd.in/gb679H8F')">Open a MOTs Case</div>
+               </div>
+              <div class="float-child-right-buttons">
+                  <div class="well-openMotsCase" target="_blank" onclick="window.open('https://www.linkedin.com/help/linkedin/ask/LM-IR')" style="padding-top: 10px!important;">Open LMS Support Case</div>
+                  <p style="margin-left: -20%; width: 80%;">Don't know where to open a case? See <a target="_blank" href="https://microsoft.sharepoint.com/teams/MOTSSales/SitePages/How-to-Reach-Us.aspx">here</a></p>
+              </div>
+               </div>
+            </div>
+         </div>
+			 <div class="row">
+				<div class="col-md-9">
+				   <div onclick="location.href='/pagesTool';"><img class="arrowImage" src="/assets/Return_Icon.png" style="float:right"/></div>
+				</div>
+			 </div>
+         <br>
+         </div>
+      </div>
+   </body>
+</html>

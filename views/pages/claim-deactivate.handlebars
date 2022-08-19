@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>MOTS Pages Guide</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/pages/styles.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="/js/pages/claim-deactivate.js"></script>
+      <style>
+         .mainBody {
+            height: 680px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container text-center">
+      <div class="row">
+         <div class="col-md-4">
+            <img class="headerImage" src="/assets/Owl_Avatar.png" />
+         </div>
+         <div class="col-md-6">
+            <h2 class="headerText">
+               MOTS Pages Guide
+            </h2>
+         </div>
+      </div>
+      <div class = "mainBody">
+         <br>
+         <div class="row">
+            <div class="col-md-3 col-md-offset-2">
+               <div class="titleBox" style="padding-top: 20px!important" id="boxTitle">Claim / Deactivate</div>
+            </div>
+         </div>
+         <div id="lvl_1">
+            <h4 id="q1">What would you like to do with your page?</h4>
+            <div id="back" class="col-md-3">
+               <div onclick="location.href='/pagesTool';"><img class="arrowImage" src="/assets/BackButton.png" style="margin-top: 30px;"/></div>
+            </div>
+            <div id="options">
+               <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" style="padding-top: 15px!important;"> Deactivate </button>
+               <button class="well" id="level1" onclick="logic_fun(),add_results_Level1(this)" style="padding-top: 15px!important;"> Claim </button>
+            </div>
+         </div>
+         <div id="lvl_2">
+            <h4 id="q2">How many employees?</h4>
+            <div id="back" class="col-md-3">
+               <div onclick="reduce_x()"><img class="arrowImage" src="/assets/BackButton.png" style="margin-top: 30px;"/></div>
+            </div>
+            <div id="options">
+               <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" style="padding-top: 25px!important;"> More than 100 </button>
+               <button class="well" id="level2" onclick="logic_fun(),add_results_Level2(this)" style="padding-top: 25px!important;"> Less than 100 </button>
+            </div>
+         </div>
+         <div id="lvl_results_yes">
+            <div class="row">
+               <div class="col-md-3 col-md-offset-2">
+                  <img src="/assets/Tick_Icon.png" id="resultsImage" />
+               </div>
+               <div class="col-md-3" id="displayText">
+                  <h4 id="claim-description" style="display: none;">The client can self service a page claim by following the steps <a href="https://www.linkedin.com/help/linkedin/answer/a565267" style="text-decoration: underline;" target="_blank">here</a></h4>
+                  <h4 id="claim-description2" style="display: none;">If they have already done so please see our Add Admin page <a onclick="return redirectAddAdmin();" style="text-decoration: underline; cursor: pointer;">here</a></h4>
+                  <h4 id="answerline1"></h4>
+                  <h4 id="answerline2"></h4>
+                  <h4 id="answerline3" style="display: none;">Help Centre Article: <a href="https://www.linkedin.com/help/linkedin/topics/6227/6228/5016">here</a></h4>
+               </div>
+            </div>
+            <div class="row">
+               <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
+                  <p id="level1-results-yes"></p>
+                  <p id="level2-results-yes"></p>
+                  <p id="level3-results-yes"></p>
+                  <p id="level4-results-yes"></p>
+               </div>
+               <div class="col-md-3 col-md-offset-4">
+                  <div class = "arrowImage" onclick="saveFile()"><img src="/assets/copy_paste.png" id="assets-copy-image-yes"/></div>
+               </div>
+            </div>
+            <div class="row">
+
+               <div class="float-container-buttons">
+
+              <div class="float-child-left-buttons">
+                  <div class="well-openMotsCase" target="_blank"  onclick="window.open('https://lnkd.in/gb679H8F')">Open a MOTs Case</div>
+               </div>
+              
+              <div class="float-child-right-buttons">
+                  <div class="well-openMotsCase" target="_blank" onclick="window.open('https://www.linkedin.com/help/linkedin/ask/LM-IR')" style="padding-top: 10px!important;">Open LMS Support Case</div>
+                  <p style="margin-left: -20%; width: 80%;">Don't know where to open a case? See <a target="_blank" href="https://microsoft.sharepoint.com/teams/MOTSSales/SitePages/How-to-Reach-Us.aspx">here</a></p>
+              </div>
+           
+               </div>
+            </div>
+         </div>
+         <div id="lvl_results_no">
+            <div class="row">
+               <div class="col-md-3 col-md-offset-2">
+                  <img src="/assets/Line_Icon.png" id="resultsImage" />
+               </div>
+               <div class="col-md-3" id="displayText">
+                  <h4 id="answerline1"></h4>
+                  <h4 id = "resultReason-no">If you have any further questions please copy the following and open a case</h4>
+               </div>
+            </div>
+            <div class="row">
+               <div id = "textResultsDisplay" class="col-md-3 col-md-offset-4">
+                  <p id="level1-results-no"></p>
+                  <p id="level2-results-no"></p>
+                  <p id="level3-results-no"></p>
+                  <p id="level4-results-no"></p>
+               </div>
+               <div class="col-md-3 col-md-offset-4">
+                  <div class = "arrowImage" onclick="saveFile()"><img src="/assets/copy_paste.png" id="assets-copy-image-no"/></div>
+               </div>
+            </div>
+            <div class="row">
+
+               <div class="float-container-buttons">
+
+              <div class="float-child-left-buttons">
+                  <div class="well-openMotsCase" target="_blank"  onclick="window.open('https://lnkd.in/gb679H8F')">Open a MOTs Case</div>
+               </div>
+              
+              <div class="float-child-right-buttons">
+                  <div class="well-openMotsCase" target="_blank" onclick="window.open('https://www.linkedin.com/help/linkedin/ask/LM-IR')" style="padding-top: 10px!important;">Open LMS Support Case</div>
+                  <p style="margin-left: -20%; width: 80%;">Don't know where to open a case? See <a target="_blank" href="https://microsoft.sharepoint.com/teams/MOTSSales/SitePages/How-to-Reach-Us.aspx">here</a></p>
+              </div>
+           
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-9">
+               <div onclick="location.href='/pagesTool';"><img class="arrowImage" src="/assets/Return_Icon.png" style="float:right"/></div>
+            </div>
+         </div>
+         <br>
+      </div>
+      <script type="text/javascript">
+         $(document).ready(function() {          
+			 document.getElementById("lvl_1").style.display="block";
+			 document.getElementById("lvl_2").style.display="none";
+			 document.getElementById("lvl_results_yes").style.display="none";
+			 document.getElementById("lvl_results_no").style.display="none";         
+         });
+      </script>
+   </body>
+</html>
