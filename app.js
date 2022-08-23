@@ -63,6 +63,7 @@ app.use((req, res, next)=>{
 const home = require('./routes/home/index');
 const pages = require('./routes/pages/index');
 const languageTool = require('./routes/languageTool/index');
+const languageToolAdmin = require('./routes/admin/languageTool');
 const admin = require('./routes/admin/index');
 const posts = require('./routes/admin/posts');
 const categories = require('./routes/admin/categories');
@@ -71,6 +72,7 @@ app.use('/', home);
 app.use('/pagesTool', pages);
 app.use('/languageTool', languageTool);
 app.use('/admin', admin);
+app.use('/admin/languageTool', languageToolAdmin);
 app.use('/admin/posts', posts);
 app.use('/admin/categories', categories);
 

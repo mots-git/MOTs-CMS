@@ -1,13 +1,34 @@
 <div id="mainContainer">
+			{{#each languageTools}}
 			<div class="col-md-3 col-md-offset-3">
-				<div class="well" onclick="location.href='/languageTool/sponsoredContent';" style="background-color: blue; color: white;">
-				Sponsored Content
+				<div class="well" onclick="location.href='/languageTool/{{url}}';" style="background-color: blue; color: white;">
+				{{title}}
 				</div>
 			</div>
 			<br><br>
+			{{/each}}
+			<!--
 			<div class="col-md-3 col-md-offset-3">
 				<div class="well" onclick="location.href='/languageTool/sponsoredMessaging';" style="background-color: blue; color: white;">
 				Sponsored Messaging
 				</div>
 			</div>
+			-->
 		</div>
+
+		
+          <!-- Posts 
+          <div class="card mb-4">
+            <img class="card-img-top" src="/uploads/{{file}}" alt="Card image cap"> 
+            <div class="card-body">
+              <h2 class="card-title">{{title}}</h2>
+              <p class="card-text">{{body}}</p>
+              <a href="/post/{{id}}" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on {{generateDate date "MMMM Do YYYY"}} -
+              <a href="#">{{category.name}}</a>
+            </div>
+          </div>
+		  -->
+          
