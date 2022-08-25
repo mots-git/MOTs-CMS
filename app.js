@@ -64,6 +64,7 @@ const home = require('./routes/home/index');
 const pages = require('./routes/pages/index');
 const languageTool = require('./routes/languageTool/index');
 const languageToolAdmin = require('./routes/admin/languageTool');
+const languageToolAdminContent = require('./routes/admin/languageToolContent');
 const admin = require('./routes/admin/index');
 const posts = require('./routes/admin/posts');
 const categories = require('./routes/admin/categories');
@@ -73,6 +74,7 @@ app.use('/pagesTool', pages);
 app.use('/languageTool', languageTool);
 app.use('/admin', admin);
 app.use('/admin/languageTool', languageToolAdmin);
+app.use('/admin/languageTool/content', languageToolAdminContent);
 app.use('/admin/posts', posts);
 app.use('/admin/categories', categories);
 

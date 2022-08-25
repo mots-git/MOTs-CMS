@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const LanguageTool = require('../../models/LanguageTool');
+const LanguageToolContent = require('../../models/LanguageToolContent');
 //const faker = require('faker');
 const {userAuthenticated} = require('../../helpers/authentication');
 
@@ -12,31 +13,43 @@ router.all('/*', userAuthenticated, (req, res, next)=>{
 });
 
 router.get('/', (req, res)=>{
-    LanguageTool.find({})
-        .then(languageTools=>{
-            res.render('admin/languageTool', {languageTools: languageTools})
+    LanguageToolContent.find({})
+        .then(languageToolContent=>{
+            res.render('admin/languageTool/contentIndex', {languageToolContent: languageToolContent})
     });
 });
 
 router.get('/create', (req, res)=>{
 
-    LanguageTool.find({}).then(languageTools=>{
-        res.render('admin/languageTool/create', {languageTools: languageTools})
+    LanguageToolContent.find({}).then(languageToolContent=>{
+        res.render('admin/languageTool/contentCreate', {languageToolContent: languageToolContent})
     });
     
 });
 
 router.post('/create', (req, res)=>{
+
+    let exceptionLanguage = true;
+
+    if(req.body.exceptionLanguage){
+        exceptionLanguage=true;
+    }
+    else{
+        exceptionLanguage=false;
+    }
     
-    const newLanguageTool = new LanguageTool({
+    const newLanguageToolContent = new LanguageToolContent({
         title:req.body.title,
-        url:req.body.url
+        geoBody:req.body.geoBody,
+        exceptionLanguage:exceptionLanguage,
+        profilesBody:req.body.profilesBody,
+        adsBody:req.body.adsBody
     });
 
-    newLanguageTool.save().then(savedLanguageTool=>{
-        console.log(savedLanguageTool);
-        req.flash('success_message', `Content ${savedLanguageTool.title} was created successfully`);
-        res.redirect('/admin/languageTool');
+    newLanguageToolContent.save().then(savedLanguageToolContent=>{
+        console.log(savedLanguageToolContent);
+        req.flash('success_message', `Content ${savedLanguageToolContent.title} was created successfully`);
+        res.redirect('/admin/languageTool/content');
     }).catch(error=>{
         console.log(error)
     });

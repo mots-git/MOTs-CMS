@@ -1,0 +1,36 @@
+<h1>Language Tool Content</h1>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>geoBody</th>
+            <th>profilesBody</th>
+            <th>adsBody</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each languageToolContent}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{title}}</td>
+            <td>{{exceptionLanguage}}</td>
+            <td>{{geoBody}}</td>
+            <td>{{profilesBody}}</td>
+            <td>{{adsBody}}</td>
+            <td><a href="/admin/languageTool/content/edit/{{_id}}" class="btn btn-info">Edit</a></td>
+            <td>
+
+                <form action="/admin/languageTool/content/{{id}}?_method=DELETE" method="post">
+                
+                    <button type="submit" class="btn btn-danger">DELETE</button>
+
+                </form>
+
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

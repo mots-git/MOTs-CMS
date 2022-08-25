@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Post = require('../../models/Post');
 const LanguageTool = require('../../models/LanguageTool');
+const LanguageToolContent = require('../../models/LanguageToolContent');
 const Category = require('../../models/Category');
 const User = require('../../models/User');
 const bcrypt = require('bcryptjs');
@@ -23,7 +24,10 @@ router.get('/', (req, res)=>{
 });
 
 router.get('/sponsoredContent', (req, res)=>{
-    res.render('languageTool/sponsoredContent')
+    LanguageToolContent.find({})
+        .then(languageToolContent=>{
+            res.render('languageTool/sponsoredContent', {languageToolContent: languageToolContent})
+    });
 });
 
 router.get('/sponsoredMessaging', (req, res)=>{

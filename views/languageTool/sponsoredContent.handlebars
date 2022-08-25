@@ -1,23 +1,80 @@
 <div id="mainContainer">
 			<h1>Sponsored Content</h1>
 			<select id="combo">
-			  <option value="1">Spanish</option>
-			  <option value="2">French</option>
-			  <option value="3">English</option>
+				{{#each languageToolContent}}
+			  	<option value="{{id}}">{{title}}</option>
+			  	{{/each}}
 			</select>
 			<input id="button1" type="button" value="Get Results" />
+
 		</div>
 		
 		<script>
 			$(document).ready(function(){ 
 				//EXCEPTION and NON EXCEPTION LANGUAGE SELECTOR AND ENGLISH FLOW
 			  $('#button1').click(function(){ 
-				if($('#combo :selected').text() == "Spanish"){
+				if($('#combo :selected').text() == "Italian"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Italian"}}
+					console.log("{{title}}")
 					document.getElementById("nonExceptionLanguage").style.display = "block";
 					document.getElementById("exceptionLanguage").style.display = "none";
 					document.getElementById("englishResults").style.display = "none";
-					document.getElementById("languageProfilesNonExeception").innerHTML = "Spanish";
-					document.getElementById("languageAdsNonXeception").innerHTML = "Spanish";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonXeception").innerHTML = "{{adsBody}}";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Spanish"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Spanish"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonXeception").innerHTML = "{{adsBody}}";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "English"){
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					//document.getElementById("mainContainer").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "block";
+					document.getElementById("languageTextException").innerHTML = "show languages for English";
+				}
+				if($('#combo :selected').text() == "French"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "French"}}
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "block";
+					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
+					document.getElementById("languageSelected").innerHTML = "{{title}}";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "German"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "German"}}
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "block";
+					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
+					document.getElementById("languageSelected").innerHTML = "{{title}}";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				/*
+				if($('#combo :selected').text() == "Italian"){
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "Italian";
+					document.getElementById("languageAdsNonXeception").innerHTML = "Italian";
 				}
 				if($('#combo :selected').text() == "English"){
 					document.getElementById("nonExceptionLanguage").style.display = "none";
@@ -35,6 +92,16 @@
 					document.getElementById("languageSelected").innerHTML = "French";
 					document.getElementById("languageTextException").innerHTML = "show languages for French";
 				}
+				if($('#combo :selected').text() == "German"){
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "block";
+					document.getElementById("languageProfilesExeception").innerHTML = "German";
+					document.getElementById("languageAdsExeception").innerHTML = "German";
+					document.getElementById("languageSelected").innerHTML = "German";
+					document.getElementById("languageTextException").innerHTML = "show languages for German";
+				}
+				*/
 			  });
 			  //ENGLISH FLOW COUNTRY SELECTOR
 			  /*
