@@ -1,23 +1,39 @@
-<div id="mainContainer">
-			<h1>Sponsored Messaging</h1>
-			<select id="combo">
-			  <option value="1">Spanish</option>
-			  <option value="2">French</option>
-			  <option value="3">English</option>
-			</select>
-			<input id="button1" type="button" value="Get Results" />
-		</div>
-		
-		<script>
+      <style>
+		.mainBody {
+			background-color: white;
+			height: 800px;
+		}
+		.titleBox {
+			height: 95px;
+		}
+	  </style>
+	  <script>
 			$(document).ready(function(){ 
 				//EXCEPTION and NON EXCEPTION LANGUAGE SELECTOR AND ENGLISH FLOW
 			  $('#button1').click(function(){ 
-				if($('#combo :selected').text() == "Spanish"){
+				if($('#combo :selected').text() == "Italian"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Italian"}}
+					console.log("{{title}}")
 					document.getElementById("nonExceptionLanguage").style.display = "block";
 					document.getElementById("exceptionLanguage").style.display = "none";
 					document.getElementById("englishResults").style.display = "none";
-					document.getElementById("languageProfilesNonExeception").innerHTML = "Spanish";
-					document.getElementById("languageAdsNonXeception").innerHTML = "Spanish";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonXeception").innerHTML = "{{adsBody}}";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Spanish"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Spanish"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonXeception").innerHTML = "{{adsBody}}";
+					{{/ifStatement}}
+					{{/each}}
 				}
 				if($('#combo :selected').text() == "English"){
 					document.getElementById("nonExceptionLanguage").style.display = "none";
@@ -27,35 +43,64 @@
 					document.getElementById("languageTextException").innerHTML = "show languages for English";
 				}
 				if($('#combo :selected').text() == "French"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "French"}}
 					document.getElementById("nonExceptionLanguage").style.display = "none";
 					document.getElementById("englishResults").style.display = "none";
 					document.getElementById("exceptionLanguage").style.display = "block";
-					document.getElementById("languageProfilesExeception").innerHTML = "French";
-					document.getElementById("languageAdsExeception").innerHTML = "French";
-					document.getElementById("languageSelected").innerHTML = "French";
-					document.getElementById("languageTextException").innerHTML = "show languages for French";
+					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
+					document.getElementById("languageSelected").innerHTML = "{{title}}";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "German"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "German"}}
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "block";
+					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
+					document.getElementById("languageSelected").innerHTML = "{{title}}";
+					{{/ifStatement}}
+					{{/each}}
 				}
 			  });
-			  //ENGLISH FLOW COUNTRY SELECTOR
-			  /*
-			  $('#englishButton').click(function(){ 
-				if($('#comboEnglish :selected').text() == "Spain"){					
-					document.getElementById("englishResults").style.display = "block";
-					document.getElementById("languageTextNonException").innerHTML = "show languages for Spanish";
-				}
-				if($('#comboEnglish :selected').text() == "France"){					
-					document.getElementById("englishResults").style.display = "block";
-					document.getElementById("languageTextException").innerHTML = "show languages for English";
-				}
-				if($('#comboEnglish :selected').text() == "Germany"){					
-					document.getElementById("englishResults").style.display = "block";
-					document.getElementById("languageTextException").innerHTML = "show languages for French";
-				}
-			  });
-			  */
 			});
 		</script>
-		<!-- Non Exception Language -->
+	  
+	  <div class="container text-center">
+      <div class="row">
+         <div class="col-md-4">
+            <img class="headerImage" src="/assets/Owl_Avatar.png" />
+         </div>
+         <div class="col-md-6">
+            <h2 class="headerText">
+               Language Targeting Tool
+            </h2>
+         </div>
+      </div>
+      <div class = "mainBody">
+         <br>
+         <div class="row">
+            <div class="col-md-3 col-md-offset-2">
+               <div class="titleBox" style="padding-top: 20px!important">Sponsored Messaging</div>
+            </div>
+         </div>
+         <div id="lvl_results_yes">
+            <div class="row">
+               <div class="col-md-3 col-md-offset-2">
+                  <img src="/assets/Tick_Icon.png" id="resultsImage" />
+               </div>
+               <div class="col-md-3" id="displayText" style="width:40%;">
+				<select id="combo">
+					{{#each languageToolContent}}
+					<option value="{{id}}">{{title}}</option>
+					{{/each}}
+				</select>
+				<input id="button1" type="button" value="Get Results" />
+                 <!-- Non Exception Language -->
 		<div id="nonExceptionLanguage" style="display:none;">
 			<p>Language of Profiles that can be served</p>
 			<ul>
@@ -76,37 +121,10 @@
 			<p>But please note any other language profiles will also be served in the selected Geos:</p>
 			<p>Example: Spain will serve Spanish AND English profiles</p>
 		</div>
-		<!-- English Language 
-		<div id="englishLanguage" style="display:none;">
-			<div id="englishDropdown">
-				<p>Country being targeted</p>
-				<input id="englishButton" type="button" value="Get Results" />				
-				<select id="comboEnglish">
-				  <option value="1">Spain</option>
-				  <option value="2">France</option>
-				  <option value="3">Germany</option>
-				</select>
-			</div>
-			<div id="englishResults" style="display:none;">
-				<p id = "languageTextNonException"></p>
-				<p>Language of Profiles that can be served</p>
-				<ul>
-					<li>xxx</li>
-					<li>English</li>
-				</ul>
-				<p>Language ad needs to be served in:</p>
-				<ul>
-					<li>xxx</li>
-					<li>English</li>
-				</ul>
-			</div>
-		</div>
-		-->
 		<!-- Exception Language -->
 		<div id="exceptionLanguage" style="display:none;">
 			<div id="geoWindow">
 				<p id = "languageTextException"></p>
-				<p>exceptionLanguage</p>
 				<p>Please note:</p><p id="languageSelected"></p><p>Language is an exception language</p>
 				<p>This langauge is associated to these Geos:</p>
 				<ul>
@@ -128,3 +146,30 @@
 				</ul>
 			</div>
 		</div>
+               </div>
+            </div>
+            <div class="row">
+
+               <div class="float-container-buttons">
+
+              <div class="float-child-left-buttons">
+                  <div class="well-openMotsCase" target="_blank"  onclick="window.open('https://lnkd.in/gb679H8F')">Open a MOTs Case</div>
+               </div>
+              
+              <div class="float-child-right-buttons">
+                  <div class="well-openMotsCase" target="_blank" onclick="window.open('https://www.linkedin.com/help/linkedin/ask/LM-IR')" style="padding-top: 10px!important;">Open LMS Support Case</div>
+                  <p style="margin-left: -20%; width: 80%;">Don't know where to open a case? See <a target="_blank" href="https://microsoft.sharepoint.com/teams/MOTSSales/SitePages/How-to-Reach-Us.aspx">here</a></p>
+              </div>
+           
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-9">
+               <div onclick="location.href='/languageTool';"><img class="arrowImage" src="/assets/Return_Icon.png" style="float:right"/></div>
+            </div>
+         </div>
+         <br>
+      </div>
+   </body>
+</html>

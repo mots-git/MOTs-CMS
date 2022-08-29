@@ -57,23 +57,49 @@ router.post('/create', (req, res)=>{
     // console.log(req.files);
 });
 
-// router.post('/generate-fake-posts', (req, res)=>{
+router.get('/edit/:id', (req, res)=>{
 
-//     for(let i = 0; i < req.body.amount; i++){
+    LanguageToolContent.findOne({_id: req.params.id})
+        .then(languageToolContent=>{
+                res.render('admin/languageTool/contentEdit', {languageToolContent: languageToolContent})
+    });
+});
 
-//         let post = new Post();
+router.put('/edit/:id', (req, res)=>{
 
-//         post.title = faker.name.title();
-//         post.status = 'public';
-//         post.allowComments = faker.datatype.boolean();
-//         post.body = faker.lorem.sentence();
+    LanguageToolContent.findOne({_id: req.params.id})
+        .then(languageToolContent=>{
 
-//         post.save(function(err){
-//             if(err) throw err;
-//         });
-//     }
-//     res.redirect('/admin/posts');
+            if(req.body.exceptionLanguage){
+                exceptionLanguage=true;
+            }
+            else{
+                exceptionLanguage=false;
+            }
 
-// })
+            languageToolContent.title = req.body.title;
+            languageToolContent.geoBody = req.body.geoBody;
+            languageToolContent.exceptionLanguage = exceptionLanguage;
+            languageToolContent.profilesBody = req.body.profilesBody;
+            languageToolContent.adsBody = req.body.adsBody;
+
+            languageToolContent.save().then(updatedPost=>{
+                req.flash('success_message', 'Content was successfully updated');
+                res.redirect('/admin/languageTool/content')
+            });
+    });
+
+});
+
+router.delete('/:id', (req, res)=>{
+
+    LanguageToolContent.findOne({_id: req.params.id})
+        .then(languageToolContent=>{
+            languageToolContent.remove();
+            req.flash('success_message', 'Content was successfully deleted');
+            res.redirect('/admin/languageTool/content')          
+    });
+
+})
 
 module.exports = router;
