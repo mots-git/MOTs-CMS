@@ -1,0 +1,18 @@
+<h1>Language Tool Homepage Edit</h1>
+<form action="/admin/languageTool/homepage/edit/{{languageToolHomepage.id}}?_method=PUT" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="para">Paragrapgh 1</label>
+        <input name="para" type="text" class="form-control" id="para" value="{{languageToolHomepage.para}}" >
+    </div>
+    <div class="form-group">
+        <label for="para2">Paragrapgh 2</label>
+        <input name="para2" type="text" class="form-control" id="para2" value="{{languageToolHomepage.para2}}" >
+    </div>
+    <div class="form-group">
+        <label for="contactEmail">Contact Email</label>
+        <input name="contactEmail" type="text" class="form-control" id="contactEmail" value="{{languageToolHomepage.contactEmail}}" >
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit Content</button>
+    
+</form>

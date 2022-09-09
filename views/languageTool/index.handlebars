@@ -12,18 +12,26 @@
          <div class = "mainBody">
 		 <br>
 		 <div class="textBody">
-			<h4>Welcome to the MOTS guide on Language Targeting, this guides you through the Geos and Profiles your ad can be served in, along with Language your ad has to be in.</h4>
-			<h4>If you don't see your query here or need additional support please email ads escalations <a href="mailto:ads_escalation@linkedin.com" style="text-decoration: underline;">here</a></h4>
-		 </div> 
+			{{#each languageToolHomepage}}
+			<h4>{{para}}</h4>
+			{{/each}}
+			{{#each languageToolHomepage}}
+			<h4></h4>
+			<h4>{{para2}} <a href="mailto:{{contactEmail}}" style="text-decoration: underline;">here</a></p>
+			{{/each}}
+			</div> 
 			<div id="page1">
-				<div class="row">
-				   {{#each languageTools}}
+				<div class="row">				   
 					<div class="col-md-3 col-md-offset-3">
-						<div class="well" onclick="location.href='/languageTool/{{url}}';" style="background-color: blue; color: white; padding-top: 45px!important;">
-						{{title}}
+						<div class="well" onclick="location.href='/languageTool/sponsoredContent';" style="background-color: blue; color: white; padding-top: 45px!important;">
+						Sponsored Content
 						</div>
-					</div>
-					{{/each}}
+					</div>		
+					<div class="col-md-3 col-md-offset-3">
+						<div class="well" onclick="location.href='/languageTool/sponsoredMessaging';" style="background-color: blue; color: white; padding-top: 45px!important;">
+						Sponsored Messaging
+						</div>
+					</div>				
 				</div>
 			</div>
          </div>

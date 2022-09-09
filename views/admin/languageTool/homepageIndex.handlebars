@@ -1,0 +1,33 @@
+<h1>Language Tool Homepage Content</h1>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Paragragh 1</th>
+            <th>Paragragh 2</th>
+            <th>Contact Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each languageToolHomepage}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{para}}</td>
+            <td>{{para2}}</td>
+            <td>{{contactEmail}}</td>
+            <td><a href="/admin/languageTool/homepage/edit/{{_id}}" class="btn btn-info">Edit</a></td>
+            <td>
+
+                <form action="/admin/languageTool/homepage/{{id}}?_method=DELETE" method="post">
+                
+                    <button type="submit" class="btn btn-danger">DELETE</button>
+
+                </form>
+
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

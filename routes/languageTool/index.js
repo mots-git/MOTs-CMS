@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('../../models/Post');
-const LanguageTool = require('../../models/LanguageTool');
+const LanguageToolHomepage = require('../../models/LanguageToolHomepage');
 const LanguageToolContent = require('../../models/LanguageToolContent');
 const Category = require('../../models/Category');
 const User = require('../../models/User');
@@ -17,10 +17,10 @@ router.all('/*', (req, res, next)=>{
 });
 
 router.get('/', (req, res)=>{
-    LanguageTool.find({})
-        .then(languageTools=>{
-            res.render('languageTool', {languageTools: languageTools})
-    });  
+    LanguageToolHomepage.find({})
+        .then(languageToolHomepage=>{
+            res.render('languageTool', {languageToolHomepage: languageToolHomepage})
+    });
 });
 
 router.get('/sponsoredContent', (req, res)=>{
