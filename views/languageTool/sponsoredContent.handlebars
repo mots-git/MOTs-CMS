@@ -69,7 +69,8 @@
 					document.getElementById("exceptionLanguage").style.display = "none";
 					document.getElementById("englishResults").style.display = "none";
 					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
-					document.getElementById("languageAdsNonXeception").innerHTML = "{{adsBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
 					{{/ifStatement}}
 					{{/each}}
 				}
@@ -81,7 +82,164 @@
 					document.getElementById("exceptionLanguage").style.display = "none";
 					document.getElementById("englishResults").style.display = "none";
 					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
-					document.getElementById("languageAdsNonXeception").innerHTML = "{{adsBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Portuguese"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Portuguese"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Russian"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Russian"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Czech"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Czech"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Turkish"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Turkish"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Romanian"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Romanian"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Polish"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Polish"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Japanese"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Japanese"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Bahasa Indonesian"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Bahasa Indonesian"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Korean"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Korean"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Traditional Chinese"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Traditional Chinese"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Simplified Chinese"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Simplified Chinese"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Arabic"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Arabic"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonException").innerHTML = "{{adsBody}}";
+					document.getElementById("nonExceptionDescription").innerHTML = "Note: If the profile language is in English only then your ad will serve to both English and {{title}} along with the creative being in both languages ";
 					{{/ifStatement}}
 					{{/each}}
 				}
@@ -91,29 +249,189 @@
 					document.getElementById("exceptionLanguage").style.display = "none";
 					document.getElementById("englishResults").style.display = "block";
 				}
-				if($('#combo :selected').text() == "French"){
+				if($('#combo :selected').text() == "French"){					
 					{{#each languageToolContent}}
-					{{#ifStatement title "French"}}
+					{{#ifStatement title "French"}}		
+					var geos = '{{geoBody}}';
+					var geoArr = geos.split(',');		
 					document.getElementById("nonExceptionLanguage").style.display = "none";
 					document.getElementById("englishResults").style.display = "none";
 					document.getElementById("exceptionLanguage").style.display = "block";
 					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
 					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
-					//document.getElementById("languageSelected").innerHTML = "{{title}}";
-					document.getElementById("geoLocationsExeception").innerHTML = "{{geoBody}}";
+					document.getElementById("fullListFrench").innerHTML = geoArr[geoArr.length-1];
+					if (document.contains(document.getElementById("languageDisplay"))) {
+						document.getElementById("languageDisplay").remove();
+					}
+					var ul = document.createElement("ul");
+					document.getElementById('exceptionGeos').appendChild(ul);
+					ul.setAttribute(
+					'style',
+					'text-align:left;',
+					);
+					ul.setAttribute('id', 'languageDisplay');
+					for (var i =0; i < geoArr.length-1; i++)
+					{
+						var li = document.createElement("li");  
+						li.innerHTML = geoArr[i];
+						ul.appendChild(li);
+						console.log(geoArr[i])
+					}
 					{{/ifStatement}}
 					{{/each}}
 				}
 				if($('#combo :selected').text() == "German"){
 					{{#each languageToolContent}}
 					{{#ifStatement title "German"}}
+					var geos = '{{geoBody}}';
+					var geoArr = geos.split(',');
 					document.getElementById("nonExceptionLanguage").style.display = "none";
 					document.getElementById("englishResults").style.display = "none";
 					document.getElementById("exceptionLanguage").style.display = "block";
 					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
 					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
-					//document.getElementById("languageSelected").innerHTML = "{{title}}";
-					document.getElementById("geoLocationsExeception").innerHTML = "{{geoBody}}";
+					document.getElementById("fullListFrench").innerHTML = "";
+					if (document.contains(document.getElementById("languageDisplay"))) {
+						document.getElementById("languageDisplay").remove();
+					}
+					var ul = document.createElement("ul");
+					document.getElementById('exceptionGeos').appendChild(ul);
+					ul.setAttribute(
+					'style',
+					'text-align:left;',
+					);
+					ul.setAttribute('id', 'languageDisplay');
+					for (var i =0; i < geoArr.length; i++)
+					{
+						var li = document.createElement("li");  
+						li.innerHTML = geoArr[i];
+						ul.appendChild(li);
+						console.log(geoArr[i])
+					}
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Danish"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Danish"}}
+					var geos = '{{geoBody}}';
+					var geoArr = geos.split(',');
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "block";
+					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
+					document.getElementById("fullListFrench").innerHTML = "";
+					if (document.contains(document.getElementById("languageDisplay"))) {
+						document.getElementById("languageDisplay").remove();
+					}
+					var ul = document.createElement("ul");
+					document.getElementById('exceptionGeos').appendChild(ul);
+					ul.setAttribute(
+					'style',
+					'text-align:left;',
+					);
+					ul.setAttribute('id', 'languageDisplay');
+					for (var i =0; i < geoArr.length; i++)
+					{
+						var li = document.createElement("li");  
+						li.innerHTML = geoArr[i];
+						ul.appendChild(li);
+						console.log(geoArr[i])
+					}
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Dutch"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Dutch"}}
+					var geos = '{{geoBody}}';
+					var geoArr = geos.split(',');
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "block";
+					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
+					document.getElementById("fullListFrench").innerHTML = "";
+					if (document.contains(document.getElementById("languageDisplay"))) {
+						document.getElementById("languageDisplay").remove();
+					}
+					var ul = document.createElement("ul");
+					document.getElementById('exceptionGeos').appendChild(ul);
+					ul.setAttribute(
+					'style',
+					'text-align:left;',
+					);
+					ul.setAttribute('id', 'languageDisplay');
+					for (var i =0; i < geoArr.length; i++)
+					{
+						var li = document.createElement("li");  
+						li.innerHTML = geoArr[i];
+						ul.appendChild(li);
+						console.log(geoArr[i])
+					}
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Swedish"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Swedish"}}
+					var geos = '{{geoBody}}';
+					var geoArr = geos.split(',');
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "block";
+					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
+					document.getElementById("fullListFrench").innerHTML = "";
+					if (document.contains(document.getElementById("languageDisplay"))) {
+						document.getElementById("languageDisplay").remove();
+					}
+					var ul = document.createElement("ul");
+					document.getElementById('exceptionGeos').appendChild(ul);
+					ul.setAttribute(
+					'style',
+					'text-align:left;',
+					);
+					ul.setAttribute('id', 'languageDisplay');
+					for (var i =0; i < geoArr.length; i++)
+					{
+						var li = document.createElement("li");  
+						li.innerHTML = geoArr[i];
+						ul.appendChild(li);
+						console.log(geoArr[i])
+					}
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Norwegian"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Norwegian"}}
+					var geos = '{{geoBody}}';
+					var geoArr = geos.split(',');
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "block";
+					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
+					document.getElementById("fullListFrench").innerHTML = "";
+					if (document.contains(document.getElementById("languageDisplay"))) {
+						document.getElementById("languageDisplay").remove();
+					}
+					var ul = document.createElement("ul");
+					document.getElementById('exceptionGeos').appendChild(ul);
+					ul.setAttribute(
+					'style',
+					'text-align:left;',
+					);
+					ul.setAttribute('id', 'languageDisplay');
+					for (var i =0; i < geoArr.length; i++)
+					{
+						var li = document.createElement("li");  
+						li.innerHTML = geoArr[i];
+						ul.appendChild(li);
+						console.log(geoArr[i])
+					}
 					{{/ifStatement}}
 					{{/each}}
 				}
@@ -167,11 +485,14 @@
 			<p>Language of Profiles that can be served</p>
 			<ul style="list-style-position: inside; text-align: left;">
 				<li id="languageProfilesNonExeception"></li>
+				<li>English</li>
 			</ul>
-			<p>Language ad needs to be served in:</p>
+			<p>Language ads can be served in:</p>
 			<ul style="list-style-position: inside; margin-right: 10%;text-align: left;">
-				<li id="languageAdsNonXeception"></li>
+				<li id="languageAdsNonException"></li>
+				<li>English</li>
 			</ul>
+			<p id="nonExceptionDescription"></p>
 		</div>
 		<div id="englishResults" style="display:none;">
 			<p id = "languageTextNonException"></p>
@@ -191,10 +512,10 @@
 			<div id ="exceptionResults">
 				<div class="accordion_container">
                   <div class="accordion_head">This langauge is associated to these Geos<span class="plusminus">+</span></div>
-                  <div class="accordion_body" style="display: none;">
-                     <ul style="list-style-position: inside; text-align: left;">
-						<li id="geoLocationsExeception"></li>
-					 </ul>
+                  <div class="accordion_body"  style="display: none;" >
+                     <div id="exceptionGeos">
+					 </div>
+					 <p id = "fullListFrench"></p>
                   </div>
                   <div class="accordion_head">Language of Profiles that can be served<span class="plusminus">+</span></div>
                   <div class="accordion_body" style="display: none;">
