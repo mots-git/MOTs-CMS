@@ -1,0 +1,141 @@
+      <style>
+		.mainBody {
+			background-color: white;
+			
+		}
+		.titleBox {
+			height: 95px;
+		}
+	  </style>
+	  <script>
+			$(document).ready(function(){ 
+				//EXCEPTION and NON EXCEPTION LANGUAGE SELECTOR AND ENGLISH FLOW
+			  $('#button1').click(function(){ 
+				if($('#combo :selected').text() == "Italian"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Italian"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonXeception").innerHTML = "{{adsBody}}";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "Spanish"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "Spanish"}}
+					console.log("{{title}}")
+					document.getElementById("nonExceptionLanguage").style.display = "block";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("languageProfilesNonExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsNonXeception").innerHTML = "{{adsBody}}";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "English"){
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					//document.getElementById("mainContainer").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "block";
+					document.getElementById("languageTextException").innerHTML = "show languages for English";
+				}
+				if($('#combo :selected').text() == "French"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "French"}}
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "block";
+					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
+					document.getElementById("languageSelected").innerHTML = "{{title}}";
+					{{/ifStatement}}
+					{{/each}}
+				}
+				if($('#combo :selected').text() == "German"){
+					{{#each languageToolContent}}
+					{{#ifStatement title "German"}}
+					document.getElementById("nonExceptionLanguage").style.display = "none";
+					document.getElementById("englishResults").style.display = "none";
+					document.getElementById("exceptionLanguage").style.display = "block";
+					document.getElementById("languageProfilesExeception").innerHTML = "{{profilesBody}}";
+					document.getElementById("languageAdsExeception").innerHTML = "{{adsBody}}";
+					document.getElementById("languageSelected").innerHTML = "{{title}}";
+					{{/ifStatement}}
+					{{/each}}
+				}
+			  });
+			});
+		</script>
+	  
+	  <div class="container text-center">
+      <div class="row">
+         <div class="col-md-4" style="margin-left: -35px;">
+            <img class="headerImage" src="/assets/Owl_Avatar.png" />
+         </div>
+         <div class="col-md-8">
+            <h2 class="headerText">
+               Language Targeting Tool
+            </h2>
+         </div>
+      </div>
+      
+      <div class = "mainBody">
+         <br>
+         <div class="row">
+            <div class="col-md-2 col-md-offset-2">
+               <div class="titleBox">FAQs</div>
+            </div>
+         </div>
+		 <br><br>
+         <div class="row">
+            <div class="col-md-3 col-md-offset-3">
+               <div class="accordion_container">   
+				<h4>This is our FAQ Page, here you will find the most asked questions and the answer to these</h4>        
+                  <div class="accordion_head">For more information please see guide<span class="plusminus">+</span></div>
+                  <div class="accordion_body" style="display: none;">
+                     <p>Guide below:</p>
+                     <p>See guide <a href="https://docs.google.com/spreadsheets/d/1bTRAMyJn4NyI7cDAaov7Lw9huP8ZpvV3nfaOJSA1lBg/edit#gid=0" target="_blank">here</a></p>
+                  </div>
+                  <div class="accordion_head">What is the source of truth?<span class="plusminus">+</span></div>
+                  <div class="accordion_body" style="display: none;">
+                     <p>Source of truth will always be ads escalations. If you need to email them you can do so <a href="mailto:ads_escalations@linkedin.com" style="text-decoration: underline;">here</a></p>
+                  </div>
+				  <div class="accordion_head">Need to open a case?<span class="plusminus">+</span></div>
+                  <div class="accordion_body" style="display: none;">
+                     <p>If you don't see your query here or need additional support please open a ticket <a href="https://lnkd.in/gb679H8F" style="text-decoration: underline;" target="_blank">MOTs</a> | <a href="https://www.linkedin.com/help/linkedin/ask/LM-IR" target="_blank" style="text-decoration: underline;">LMS</a> </p>
+					 <p>MOTs: ENT, GSA and Acc Exception | LMS: OSO, Other</p>
+				  </div>
+               </div>
+            </div>
+         </div>
+         <br>
+		 <div class="row">
+            <div class="col-md-9">
+				<br><br>
+			   <div onclick="location.href='/languageTool';"><img class="arrowImage" src="/assets/Back_Button_No-Shadow.png" style="float:right; height: 8%;"/></div>
+            </div>
+			</div>
+         </div>
+      </div>
+	  <script type="text/javascript">
+         $(document).ready(function() {
+          $(".accordion_head").click(function() {
+            if ($('.accordion_body').is(':visible')) {
+              $(".accordion_body").slideUp(300);
+              $(".plusminus").text('+');
+            }
+            if ($(this).next(".accordion_body").is(':visible')) {
+              $(this).next(".accordion_body").slideUp(300);
+              $(this).children(".plusminus").text('+');
+            } else {
+              $(this).next(".accordion_body").slideDown(300);
+              $(this).children(".plusminus").text('-');
+            }
+          });
+         });
+      </script>
+   </body>
+</html>

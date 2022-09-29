@@ -34,4 +34,8 @@ router.get('/sponsoredMessaging', (req, res)=>{
     res.render('languageTool/sponsoredMessaging')
 });
 
+router.get('/faq', (req, res)=>{
+    res.render('languageTool/faq')
+});
+
 module.exports = router;
